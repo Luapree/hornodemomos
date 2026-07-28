@@ -11,7 +11,7 @@ def menu():
 menu()
 option = input("Seleccione una opción: ")
 
-// Instalar Mod
+# Instalar Mod
 if option == "1":
     os.system("cls")
     # TODO: hacer que la carpeta de www_vanilla se renombre a www para evitar errores, ahora mismo lo haria pero me da pereza...
@@ -23,20 +23,20 @@ if option == "1":
     time.sleep(2) # sinceramente esto es lo unico que se me ocurrio para arreglarlo
     shutil.copytree(mod_dir, "www")
     print("Mod instalado correctamente.")
-// Restaurar partida guardada
+# Restaurar partida guardada
 elif option == "2":
     os.system("cls")
     # TODO: lo mismo que en lo de instalar mods
     print("Restaurando partida guardada...")
     shutil.copytree(os.getcwd() + "/backup/IndexedDB", "C:/Users/" + getpass.getuser() + "/AppData/Local/Super Momos Crushers/EBWebView/Default/IndexedDB")
     print("Partida guardada restaurada correctamente.")
-// Respaldar partida guardada
+# Respaldar partida guardada
 elif option == "3":
     os.system("cls")
     print("Respaldando partida guardada...")
     # TODO: lo mismo que en los 2 comentarios de arriba
     shutil.copytree("C:/Users/" + getpass.getuser() + "/AppData/Local/Super Momos Crushers/EBWebView/Default/IndexedDB", os.getcwd() + "/backup/IndexedDB")
     print("Partida guardada respaldada correctamente.")
-// Salir
+# Salir
 elif option == "4":
     exit()    
